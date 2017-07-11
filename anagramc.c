@@ -46,17 +46,17 @@ int main() {
 
 
     start_time = (int) time(NULL);
-    for(iterations = 0; iterations < max; ++iterations) {
+    for (iterations = 0; iterations < max; ++iterations) {
         bzero(instancearray, 26);
-        for(i = 0; i < 12; ++i) {
-            for(j = 0; j < 10; ++j) {
+        for (i = 0; i < 12; ++i) {
+            for (j = 0; j < 10; ++j) {
                 ++instancearray[src[j][i] - 'a'];
             }
-            for(j = 0; j < 10; ++j) {
+            for (j = 0; j < 10; ++j) {
                 --instancearray[trg[j][i] - 'a'];
-                if(instancearray[trg[j][i] - 'a'] < 0) {
+                if (instancearray[trg[j][i] - 'a'] < 0) {
                     ++count_fail;
-		    break;	/* skip to next test */
+                    break;    /* skip to next test */
                 }
             }
         }
