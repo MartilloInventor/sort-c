@@ -8,7 +8,7 @@
 
 int main() {
     int instancearray[26];
-    char src[][12] = {
+    char src[12][10] = {
             "dfgjkdjdma",
             "dnjmfzjdma",
             "dfgdqdfdma",
@@ -22,7 +22,7 @@ int main() {
             "dfgjkdqwea",
             "suxjkdjdma"
     };
-    char trg[][12] = {
+    char trg[12][10] = {
             "fdjgdkdjma",
             "ndjmzjamda",
             "dgfqddfdma",
@@ -47,14 +47,14 @@ int main() {
 
     start_time = (int) time(NULL);
     for (iterations = 0; iterations < max; ++iterations) {
-        bzero(instancearray, 26);
+        bzero(instancearray, 26*sizeof(int));
         for (i = 0; i < 12; ++i) {
             for (j = 0; j < 10; ++j) {
-                ++instancearray[src[j][i] - 'a'];
+                ++instancearray[src[i][j] - 'a'];
             }
             for (j = 0; j < 10; ++j) {
-                --instancearray[trg[j][i] - 'a'];
-                if (instancearray[trg[j][i] - 'a'] < 0) {
+                --instancearray[trg[i][j] - 'a'];
+                if (instancearray[trg[i][j] - 'a'] < 0) {
                     ++count_fail;
                     break;    /* skip to next test */
                 }
