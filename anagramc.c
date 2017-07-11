@@ -36,7 +36,7 @@ int main() {
             "dfgjkdqwea",
             "suxjdkhdma"
     };
-    long count_fail = 0;
+    long count_fail = 0; // had to make this variable long
     int start_time = 0;
     int end_time = 0;
     int iterations = 0;
