@@ -44,7 +44,8 @@ into (sparse) arrays.
 
 This sorting program uses an indirected array to sort a [sparse
 list of ordered pairs <x,y>](http://btechsmartclass.com/DS/U1_T14.html) of
-integers by distance squared (the metric).
+integers by distance squared (the metric). I am using sparse list to
+mean that the ordered pairs are not very close together.
 
 I assumed 32 bit unsigned integers and thus the largest metric value is
 4,294,967,295. It would take very little effort to make this program support a metric whose largest value is
